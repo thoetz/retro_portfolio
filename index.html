@@ -16,9 +16,68 @@
   <div class="monitor">
     <div class="screen">
       <main class="content">
-        <section id="home" class="panel"></section>
-        <section id="projects" class="panel" hidden></section>
-        <section id="about" class="panel" hidden></section>
+        <section id="home" class="panel">
+          <header class="panel-head"><span>~/home</span><span>01/03</span></header>
+          <div class="home-main">
+            <div class="home-body">
+              <p class="eyebrow">hello, i'm</p>
+              <h1 class="title">Your Name<span class="cursor" aria-hidden="true"></span></h1>
+              <p class="lede">designer &amp; developer making small, careful things for the web.</p>
+              <div class="chips">
+                <button class="chip" type="button" data-goto="projects">see projects &rarr;</button>
+                <button class="chip" type="button" data-goto="about">about me</button>
+              </div>
+            </div>
+            <img class="avatar" src="avatar.png" alt="Pixel-art avatar">
+          </div>
+          <p class="status"><span class="dot" aria-hidden="true"></span>open to new projects</p>
+        </section>
+
+        <section id="projects" class="panel" hidden>
+          <header class="panel-head"><span>~/projects</span><span>4 items</span></header>
+          <ul class="cards">
+            <li><a class="card" href="#">
+              <span class="card-num">01</span>
+              <span class="card-title">Project One</span>
+              <span class="card-desc">One line about what it is and what you did on it.</span>
+              <span class="card-meta">2025 &middot; web</span>
+            </a></li>
+            <li><a class="card" href="#">
+              <span class="card-num">02</span>
+              <span class="card-title">Project Two</span>
+              <span class="card-desc">One line about what it is and what you did on it.</span>
+              <span class="card-meta">2025 &middot; brand</span>
+            </a></li>
+            <li><a class="card" href="#">
+              <span class="card-num">03</span>
+              <span class="card-title">Project Three</span>
+              <span class="card-desc">One line about what it is and what you did on it.</span>
+              <span class="card-meta">2024 &middot; app</span>
+            </a></li>
+            <li><a class="card" href="#">
+              <span class="card-num">04</span>
+              <span class="card-title">Project Four</span>
+              <span class="card-desc">One line about what it is and what you did on it.</span>
+              <span class="card-meta">2024 &middot; print</span>
+            </a></li>
+          </ul>
+        </section>
+
+        <section id="about" class="panel" hidden>
+          <header class="panel-head"><span>~/about</span><span>03/03</span></header>
+          <p class="lede">A few sentences about who you are, what you care about, and the kind of work you like doing. Keep it short and friendly.</p>
+          <dl class="facts">
+            <div><dt>based in</dt><dd>Your City</dd></div>
+            <div><dt>focus</dt><dd>ui, web, brand</dd></div>
+            <div><dt>currently</dt><dd>something you're working on</dd></div>
+          </dl>
+          <div class="chips">
+            <a class="chip" href="#">email</a>
+            <a class="chip" href="#">github</a>
+            <a class="chip" href="#">linkedin</a>
+            <a class="chip" href="#">résumé</a>
+          </div>
+        </section>
       </main>
     </div>
     <span class="led" aria-hidden="true"></span>

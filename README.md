@@ -18,7 +18,7 @@ VS Code **Live Server** extension for auto-reload on save.
 Every dimension derives from one variable, `--rig`, in `:root`:
 
 ```css
---rig: min(92vw, 104vh);
+--rig: min(92vw, 140vh);
 ```
 
 Each element is a decimal fraction of it (`--mon-w: calc(var(--rig) * 0.62)`),

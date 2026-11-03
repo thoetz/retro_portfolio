@@ -13,3 +13,10 @@ keys.forEach(key => {
 });
 
 document.querySelector('.key[data-target="home"]').classList.add('is-active');
+
+// on-screen buttons that jump to a section ("see projects", "about me")
+document.querySelectorAll('[data-goto]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector(`.key[data-target="${btn.dataset.goto}"]`).click();
+  });
+});
