@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="rig">
+
+  <div class="monitor">
+    <div class="screen">
+      <main class="content">
+        <section id="home" class="panel"></section>
+        <section id="projects" class="panel" hidden></section>
+        <section id="about" class="panel" hidden></section>
+      </main>
+    </div>
+    <span class="led" aria-hidden="true"></span>
+  </div>
+
+  <div class="neck" aria-hidden="true"></div>
+
+  <div class="base" aria-hidden="true">
+    <div class="vents"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="drive"></div>
+    <div class="eject"><span></span></div>
+  </div>
+
+</div>
+
+<div class="deck">
+<nav class="key-nav">
+  <div class="key-slot">
+    <button class="key" type="button" data-target="home">
+      <span class="key-inner">home</span>
+    </button>
+  </div>
+  <div class="key-slot">
+    <button class="key" type="button" data-target="projects">
+      <span class="key-inner">projects</span>
+    </button>
+  </div>
+  <div class="key-slot">
+    <button class="key" type="button" data-target="about">
+      <span class="key-inner">about</span>
+    </button>
+  </div>
+</nav>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
