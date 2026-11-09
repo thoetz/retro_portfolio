@@ -6,7 +6,7 @@
 <title>portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,13 +15,14 @@
 
   <div class="monitor">
     <div class="screen">
-      <main class="content">
+      <div class="screen-scroll">
+        <main class="content">
         <section id="home" class="panel">
           <header class="panel-head"><span>~/home</span><span>01/03</span></header>
           <div class="home-main">
             <div class="home-body">
               <p class="eyebrow">hello, i'm</p>
-              <h1 class="title">Your Name<span class="cursor" aria-hidden="true"></span></h1>
+              <h1 class="title">Thomas Goetz<span class="cursor" aria-hidden="true"></span></h1>
               <p class="lede">Data visualization specialist creating carefully crafted, intuitive analytics experiences from complex data.</p>
               <div class="chips">
                 <button class="chip" type="button" data-goto="projects">see projects &rarr;</button>
@@ -30,55 +31,119 @@
             </div>
             <img class="avatar" src="avatar.png" alt="Pixel-art avatar">
           </div>
-          <p class="status"><span class="dot" aria-hidden="true"></span>open to new projects</p>
+          <p class="status"><span class="dot" aria-hidden="true"></span>currently learning and developing at MNP</p>
         </section>
 
         <section id="projects" class="panel" hidden>
           <header class="panel-head"><span>~/projects</span><span>4 items</span></header>
-          <ul class="cards">
-            <li><a class="card" href="#">
-              <span class="card-num">01</span>
-              <span class="card-title">Project One</span>
-              <span class="card-desc">One line about what it is and what you did on it.</span>
-              <span class="card-meta">2025 &middot; web</span>
-            </a></li>
-            <li><a class="card" href="#">
-              <span class="card-num">02</span>
-              <span class="card-title">Project Two</span>
-              <span class="card-desc">One line about what it is and what you did on it.</span>
-              <span class="card-meta">2025 &middot; brand</span>
-            </a></li>
-            <li><a class="card" href="#">
-              <span class="card-num">03</span>
-              <span class="card-title">Project Three</span>
-              <span class="card-desc">One line about what it is and what you did on it.</span>
-              <span class="card-meta">2024 &middot; app</span>
-            </a></li>
-            <li><a class="card" href="#">
-              <span class="card-num">04</span>
-              <span class="card-title">Project Four</span>
-              <span class="card-desc">One line about what it is and what you did on it.</span>
-              <span class="card-meta">2024 &middot; print</span>
-            </a></li>
-          </ul>
+          <div class="cards">
+            <div class="project-column">
+              <details class="card project-card">
+                <summary class="project-card-summary">
+                  <span class="card-num">01</span>
+                  <span class="card-title">ESPN Fantasy Scoreboard</span>
+                  <span class="project-toggle-label">what is it?</span>
+                  <span class="card-meta">first live app &middot; fantasy football</span>
+                </summary>
+                <div class="project-details-content">
+                  <p class="card-desc">My first live app adds what ESPN's app misses: weekly fantasy scores and wins or losses based on our league median. I designed the logo and Canva mockups, then vibe-coded it with Claude Code while learning hosting, ESPN API calls, and secure cookie handling. After a wings-night tip from a web-dev friend, I added skeleton screens to make slow week changes clear.</p>
+                  <a class="chip project-link" href="https://espn-fantasy-scoreboard.onrender.com/" target="_blank" rel="noopener noreferrer">open live app</a>
+                </div>
+              </details>
+              <a class="card project-three" href="#">
+                <span class="card-num">03</span>
+                <span class="card-title">Project Three</span>
+                <span class="card-desc">One line about what it is and what you did on it.</span>
+                <span class="card-meta">2024 &middot; app</span>
+              </a>
+            </div>
+            <div class="project-column">
+              <a class="card project-two" href="#">
+                <span class="card-num">02</span>
+                <span class="card-title">Project Two</span>
+                <span class="card-desc">One line about what it is and what you did on it.</span>
+                <span class="card-meta">2025 &middot; brand</span>
+              </a>
+              <a class="card project-four" href="#">
+                <span class="card-num">04</span>
+                <span class="card-title">Project Four</span>
+                <span class="card-desc">One line about what it is and what you did on it.</span>
+                <span class="card-meta">2024 &middot; print</span>
+              </a>
+            </div>
+          </div>
         </section>
 
         <section id="about" class="panel" hidden>
           <header class="panel-head"><span>~/about</span><span>03/03</span></header>
-          <p class="lede">I'm a data visualization and business intelligence professional focused on transforming complex data into intuitive, high-impact analytics. My experience is rooted in Power BI and visual storytelling, and I'm now exploring web apps as I grow toward data visualization engineering.</p>
+          <p class="lede">Hi, I'm Thomas Goetz (thoetz), a data visualization and business intelligence professional based in Calgary, Canada. I work with Power BI and visual storytelling, and I'm learning web app development as I grow toward data visualization engineering. I'm interested in sports, Lego, sustainability, economics, and data analytics. I played collegiate football at the University of Calgary; these days, I enjoy rock climbing and golf.</p>
           <dl class="facts">
-            <div><dt>based in</dt><dd>Your City</dd></div>
-            <div><dt>focus</dt><dd>ui, web, brand</dd></div>
-            <div><dt>currently</dt><dd>something you're working on</dd></div>
+            <div><dt>based in</dt><dd>Calgary, Canada</dd></div>
+            <div><dt>focus</dt><dd>data visualization, business intelligence</dd></div>
+            <div><dt>currently</dt><dd>learning and developing at MNP</dd></div>
           </dl>
+          <section class="skills-dashboard" aria-labelledby="skills-title">
+            <div class="skills-dashboard-header">
+              <h2 id="skills-title">skills</h2>
+            </div>
+            <div class="skills-dashboard-grid">
+              <div class="skill-matrix" aria-label="Skill ratings">
+                <div class="skill-item">
+                  <div class="skill-item-label"><span>Power BI</span><span>5/5</span></div>
+                  <div class="skill-meter skill-meter--high" role="meter" aria-label="Power BI rating" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5"><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-label"><span>Excel</span><span>5/5</span></div>
+                  <div class="skill-meter skill-meter--high" role="meter" aria-label="Excel rating" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5"><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-label"><span>UX/UI design</span><span>4/5</span></div>
+                  <div class="skill-meter skill-meter--high" role="meter" aria-label="UX/UI design rating" aria-valuemin="0" aria-valuemax="5" aria-valuenow="4"><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-label"><span>Fabric</span><span>3/5</span></div>
+                  <div class="skill-meter skill-meter--mid" role="meter" aria-label="Fabric rating" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3"><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span></span><span></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-label"><span>SQL</span><span>2/5</span></div>
+                  <div class="skill-meter skill-meter--low" role="meter" aria-label="SQL rating" aria-valuemin="0" aria-valuemax="5" aria-valuenow="2"><span class="is-filled"></span><span class="is-filled"></span><span></span><span></span><span></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-label"><span>Data storytelling</span><span>4/5</span></div>
+                  <div class="skill-meter skill-meter--high" role="meter" aria-label="Data storytelling rating" aria-valuemin="0" aria-valuemax="5" aria-valuenow="4"><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-label"><span>DAX (placeholder)</span><span>3/5</span></div>
+                  <div class="skill-meter skill-meter--mid" role="meter" aria-label="DAX placeholder rating" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3"><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span></span><span></span></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-item-label"><span>Fantasy football</span><span>5/5</span></div>
+                  <div class="skill-meter skill-meter--high" role="meter" aria-label="Fantasy football rating" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5"><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span><span class="is-filled"></span></div>
+                </div>
+              </div>
+              <div class="experience-mix">
+                <h3>experience mix</h3>
+                <div class="experience-mix-content">
+                  <div class="experience-pie" role="img" aria-label="Experience mix: Power BI 65 percent, Fabric 20 percent, Excel 10 percent, other 5 percent"></div>
+                  <ul class="experience-legend">
+                    <li><span class="experience-swatch experience-swatch--powerbi"></span><span>Power BI</span><strong>65%</strong></li>
+                    <li><span class="experience-swatch experience-swatch--fabric"></span><span>Fabric</span><strong>20%</strong></li>
+                    <li><span class="experience-swatch experience-swatch--excel"></span><span>Excel</span><strong>10%</strong></li>
+                    <li><span class="experience-swatch experience-swatch--other"></span><span>Other</span><strong>5%</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
           <div class="chips">
             <a class="chip" href="#">email</a>
-            <a class="chip" href="#">github</a>
+            <a class="chip" href="https://github.com/thoetz">github</a>
             <a class="chip" href="#">linkedin</a>
             <a class="chip" href="#">résumé</a>
           </div>
         </section>
-      </main>
+        </main>
+      </div>
     </div>
     <span class="led" aria-hidden="true"></span>
   </div>

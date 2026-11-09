@@ -20,3 +20,29 @@ document.querySelectorAll('[data-goto]').forEach(btn => {
     document.querySelector(`.key[data-target="${btn.dataset.goto}"]`).click();
   });
 });
+
+const projectSummary = document.querySelector('.project-card-summary');
+const projectToggleLabel = document.querySelector('.project-toggle-label');
+const projectToggleText = projectToggleLabel.textContent;
+let questionMarkCount = 0;
+let questionMarkTimer;
+
+function stopQuestionMarkEffect() {
+  clearInterval(questionMarkTimer);
+  questionMarkTimer = null;
+  questionMarkCount = 0;
+  projectToggleLabel.textContent = projectToggleText;
+}
+
+function startQuestionMarkEffect() {
+  stopQuestionMarkEffect();
+  questionMarkTimer = setInterval(() => {
+    questionMarkCount = questionMarkCount % 5 + 1;
+    projectToggleLabel.textContent = projectToggleText.replace(/\?+$/, '') + '?'.repeat(questionMarkCount);
+  }, 150);
+}
+
+projectSummary.addEventListener('pointerenter', startQuestionMarkEffect);
+projectSummary.addEventListener('pointerleave', stopQuestionMarkEffect);
+projectSummary.addEventListener('focus', startQuestionMarkEffect);
+projectSummary.addEventListener('blur', stopQuestionMarkEffect);
